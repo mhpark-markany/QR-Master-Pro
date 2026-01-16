@@ -1,0 +1,7 @@
+{
+  "name": "QR Master Pro",
+  "description": "다크모드, 커스텀 디자인, 템플릿 및 히스토리 기능을 갖춘 고급 QR 코드 생성기 및 스캐너입니다.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
