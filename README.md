@@ -1,20 +1,63 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# QR Master Pro
 
-# Run and deploy your AI Studio app
+**QR Master Pro**는 다크모드, 커스텀 디자인, 템플릿 및 히스토리 관리 기능을 갖춘 프리미엄 QR 코드 생성 및 스캔 웹 애플리케이션입니다.
 
-This contains everything you need to run your app locally.
+## ✨ 주요 기능
 
-View your app in AI Studio: https://ai.studio/apps/drive/1YjErDDTI6xBxc7QahEUJW7IwSzm6xR5U
+### 1. 다양한 QR 코드 생성
+사용자의 목적에 맞는 다양한 템플릿을 제공합니다.
+- **URL**: 웹사이트 링크 연결
+- **Wi-Fi**: Wi-Fi 네트워크 정보 공유 (SSID, 비밀번호, 보안 유형)
+- **텍스트**: 일반 텍스트 정보
+- **이메일**: 받는 사람, 제목, 내용을 포함한 이메일 전송 QR
+- **SMS**: 전화번호와 메시지 내용을 포함한 문자 전송 QR
+- **전화**: 전화번호 연결
 
-## Run Locally
+### 2. 강력한 디자인 커스터마이징
+- **색상 변경**: QR 코드의 전경색(패턴)과 배경색을 자유롭게 지정할 수 있습니다. (가독성을 위해 유사한 색상 사용 시 경고 메시지 제공)
+- **로고 삽입**: QR 코드 중앙에 원하는 이미지를 업로드하여 브랜드 로고 등을 삽입할 수 있습니다.
+- **고해상도 다운로드**: 생성된 QR 코드를 고화질 PNG 이미지로 저장할 수 있습니다.
 
-**Prerequisites:**  Node.js
+### 3. 사용자 편의 기능
+- **다크 모드**: 눈의 피로를 줄여주는 다크 모드를 지원하며, 시스템 설정을 감지하거나 수동으로 전환할 수 있습니다.
+- **히스토리 관리**: 생성했던 QR 코드 기록을 로컬 스토리지에 저장하여 언제든 다시 불러오거나 삭제할 수 있습니다.
+- **입력 길이 체크**: 각 템플릿별로 최적화된 입력 글자 수 제한을 두어 QR 코드 인식률을 보장합니다.
+- **인터랙티브 투어**: 처음 방문하는 사용자를 위해 앱의 주요 기능을 소개하는 가이드 투어를 제공합니다.
 
+### 4. QR 스캐너 (모바일 최적화)
+- 모바일 환경에서 디바이스의 카메라를 활용하여 QR 코드를 즉시 스캔하고 내용을 확인할 수 있습니다.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠 기술 스택
+
+- **Frontend**: React 19, TypeScript
+- **Styling**: Tailwind CSS
+- **Animation**: GSAP (GreenSock Animation Platform)
+- **Icons**: Lucide React
+- **Libraries**: 
+  - `qrcode.react`: QR 코드 렌더링
+  - `html5-qrcode`: QR 코드 스캔 기능
+
+## 📂 프로젝트 구조
+
+```
+/
+├── index.html          # 메인 HTML 파일 (Import map 포함)
+├── index.tsx           # React 진입점
+├── App.tsx             # 메인 애플리케이션 컴포넌트
+├── types.ts            # TypeScript 타입 정의
+├── metadata.json       # 프로젝트 메타데이터 및 권한 설정
+├── components/         # 재사용 가능한 컴포넌트
+│   └── QRScanner.tsx   # QR 코드 스캐너 컴포넌트
+└── utils/              # 유틸리티 함수
+    └── qrHelpers.ts    # QR 데이터 생성 및 색상 헬퍼 함수
+```
+
+## 🚀 시작하기
+
+이 프로젝트는 최신 브라우저 환경에서 동작하도록 구성되어 있습니다. `index.html` 내의 Import map을 통해 필요한 라이브러리를 CDN에서 불러옵니다.
+
+1. **저장 및 실행**: 파일을 로컬 서버 환경(예: Live Server)에서 실행합니다.
+2. **권한**: 카메라 기능(QR 스캔)을 사용하기 위해 브라우저의 카메라 접근 권한 허용이 필요합니다.
+
+---
+**QR Master Pro**와 함께 나만의 특별한 QR 코드를 만들어보세요!
